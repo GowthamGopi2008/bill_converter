@@ -37,8 +37,9 @@ class BillFormatter():
         elif sup == self.supplier[2]:
             f_name = "VISHNU "+invoice
             df = pd.read_excel(pre_path+f_name+".xlsx")
-            df = df.drop(0)
+            # df = df.drop(0)
             df = df.sort_values(by=df.columns[1])
+            invoice = invoice[6:]
 
         path = "C:/X/Bills/"+invoice+".csv"
         clipboard.copy(path)
