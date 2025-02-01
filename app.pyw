@@ -31,14 +31,6 @@ class MainWindow(QMainWindow):
         self.label.setStyleSheet("color: black;")
         self.label.setAlignment(Qt.AlignCenter)
 
-        # self.line = QLabel("__________________________________",self)
-        # self.line.setGeometry(0,50,500,50)
-        # self.line.setAlignment(Qt.AlignHCenter)
-        # self.line.setFont(QFont("Arial",20))
-
-
-
-
         # Invoice Number Input
         self.inv_num = QLineEdit(self)
         self.inv_num.setGeometry(50,155,400,50)

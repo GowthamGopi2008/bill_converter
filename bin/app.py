@@ -37,8 +37,6 @@ class MainWindow(QMainWindow):
         # self.line.setFont(QFont("Arial",20))
 
 
-
-
         # Invoice Number Input
         self.inv_num = QLineEdit(self)
         self.inv_num.setGeometry(50,155,400,50)
@@ -89,9 +87,6 @@ class MainWindow(QMainWindow):
         self.back.clicked.connect(self.back_panel)
         self.back.hide()
 
-        self.sign = QLabel("©GowthamGopi",self)
-        self.sign.setGeometry(407,265,100,50)
-        self.sign.setFont(QFont("Poppins",8))
 
     def success_panel(self):
         self.label.hide()
