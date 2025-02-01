@@ -1,6 +1,3 @@
-if True:
-    a=5
-else:
-    b=6
+import os
 
-print(a)
+print(os.environ["HOMEPATH"])

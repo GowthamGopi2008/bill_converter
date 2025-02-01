@@ -1,5 +1,6 @@
 import pandas as pd
 import clipboard
+import os
 
 class BillFormatter():
     def __init__(self):
@@ -26,7 +27,8 @@ class BillFormatter():
 
     def Format(self, invoice):
         print(invoice)
-        pre_path = "C:/Users/Gowtham Gopi/Downloads/"
+        homepath = os.environ["HOMEPATH"]
+        pre_path = "C:/"+homepath+"/Downloads/"
 
         sup = self.FindSupplier(invoice)
 
@@ -37,8 +39,8 @@ class BillFormatter():
         elif sup == self.supplier[2]:
             f_name = "VISHNU "+invoice
             df = pd.read_excel(pre_path+f_name+".xlsx")
-            # df = df.drop(0)
             df = df.sort_values(by=df.columns[1])
+            df = df.replace("Rs.","",regex=True)
             invoice = invoice[6:]
 
         path = "C:/X/Bills/"+invoice+".csv"
